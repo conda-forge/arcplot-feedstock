@@ -34,7 +34,7 @@ requirements:
     - python-dateutil 2.8.2
     - six 1.16.0
     - pandas 2.2.1
-    - pyqt 5.15.10
+    - pyqt 5.15.11
 
 test:
   imports:
