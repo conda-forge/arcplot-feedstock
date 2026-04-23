@@ -1,6 +1,6 @@
-{% set python_min = '3.10.0' %}
+{% set python_min = "3.10.0" %}
 {% set name = "arcplot" %}
-{% set version = "0.1.5" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/arcplot-{{ version }}.tar.gz
-  sha256: 0a85ac7336f8c42f1dfd57b7e0d64b63149f819866456661c0e3408905ca3001
+  sha256: 2da8edf5095d3d70c3231bd96656c24b942435af934cae894df3907d69ed93c7
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -29,11 +29,12 @@ requirements:
     - matplotlib-base 3.8.2
     - numpy 1.26.4
     - packaging 23.2
-    - pillow 10.2.0
+    - pillow 10.3.0
     - pyparsing 3.1.1
     - python-dateutil 2.8.2
     - six 1.16.0
     - pandas 2.2.1
+    - pyqt5 5.15.11
 
 test:
   imports:
